@@ -1,0 +1,47 @@
+﻿@model Employe
+@{
+    ViewData["Title"] = "Création Employé";
+}
+<h1>Nouveau Employé</h1>
+
+<form method="post" asp-action="Hello">
+    <div class="border p-3 mt-4">
+
+        <div class="form-group mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Salary"></label>
+            <input asp-for="Salary" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="IsActif"></label>
+            <input asp-for="IsActif" class="form-check-input" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Type" class="form-control"></label>
+            <select asp-for="Type" class="form-control" asp-items="Html.GetEnumSelectList<EmployeType>()">
+                <option></option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="DepartmentId"></label>
+            <input asp-for="DepartmentId" class="form-control" />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Créer</button>
+    </div>
+    
+
+</form>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+
+    var maList = ViewData["stringlist"] as IList<string>;
+
+    TempData["tempDataFromView"] = "Data from View Privacy with TempData";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<h2>@ViewBag.Message</h2>
+<h2>@ViewData["Message"]</h2>
+<h2>@ViewData["cle"]</h2>
+
+<ul>
+    @if(maList is not null){
+        
+        foreach (var  str in maList)
+        {
+            <li>
+                @str
+            </li>
+        }
+    }
+</ul>

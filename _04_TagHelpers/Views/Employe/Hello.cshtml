@@ -1,0 +1,15 @@
+﻿@model Employe
+@{
+    ViewData["Title"] = "Bonjour Employé";
+}
+
+<div>
+    <p><a href="mailto:@Model.Email"></a>@Model.Name est @Model.Type et gagne @Model.Salary</p>
+</div>
+
+<h2>Custom Tag Helper</h2>
+
+<!-- Utilisation d'un tag helper personalisé dans le dossier Helpers (en pas oublier de rajouter le nom d'emssembly dans _ViewImports) -->
+<div>
+    <employe-info for-name=@Model.Name for-salary=@Model.Salary for-type=@Model.Type for-Email=@Model.Email />
+</div>

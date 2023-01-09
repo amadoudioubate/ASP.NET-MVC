@@ -1,0 +1,23 @@
+﻿@model Personnage
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="text-center">
+    <h4>@ViewBag.tempDataFromAction</h4>
+    <h4>@ViewBag.tempDataFromView</h4>
+</div>
+
+<h3 class="text-center text-danger">
+    @Model.Firstname, @Model.Lastname
+</h3>
+
+<h3 class="text-center text-secondary">
+    @ViewBag.myCookie
+</h3>
