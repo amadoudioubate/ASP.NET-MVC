@@ -7,7 +7,8 @@ namespace _04_TagHelpers.Controllers
     {
         public IActionResult Create()
         {
-            return View(new Employe());
+            //return View(new Employe());
+            return View("CreateHtmlHelper", new Employe());
         }
 
 
